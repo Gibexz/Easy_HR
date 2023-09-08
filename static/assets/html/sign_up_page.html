@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyHR</title>
+    <link rel="icon" href="../images/icon.png" type="image/img">
+    <link rel="stylesheet" href="../styles/default.css">
+    <link rel="stylesheet" href="../styles/sign_up_page.css">
+</head>
+<body>
+    <header id="header">
+        <img src="../images/icon.png" alt="EasyHR">
+
+    </header>
+     <div id="container">
+        <div id="register">
+            <form id="form_table" action="" method="post">
+                <div class="row">
+                    <label for="FirstName"> First Name:</label>
+                    <input type="text" id="FirstName" required><br>
+                </div>
+
+                <div class="row">
+                    <label for="LastName"> Last Name:</label>
+                    <input type="text" id="LastName" required><br>
+                </div>
+
+                <div class="row">
+                    <label for="DOB"> D.O.B:</label>
+                    <input type="date" id="DOB" required><br>
+                </div>
+                
+                <div class="row">
+                    <label for="CompanyName"> Company Name:</label>
+                    <input type="text" id="CompanyName" required><br>
+                </div>
+                
+                <div class="row">
+                    <label for="Email"> Official Email:</label>
+                    <input type="email" id="Email" required><br>
+                </div>
+                
+                <div class="row">
+                        <label for="CompanySize"> Company Size:</label>
+                    <select>
+                    <option value="">--select one--</option>
+                    <option value="">1-50</option>
+                    <option value="">51-100</option>
+                    <option value="">101-200</option>
+                    <option value="">201-500</option>
+                    <option value="">Above 500</option>
+                </select><br>
+            </div>
+                
+                <div class="row">
+                    <label for="Password"> Password:</label>
+                    <input type="password" value=""  required>
+                </div>
+                
+                 <div class="center"> 
+                    <div><input type="reset" class="cancel_btn btn" value="Cancel">
+                   </div>
+                    <div class="right"><input type="submit" class="signUp_btn btn" value="Sign Up"> 
+                    </div>
+            </div>
+        </form>
+           
+        </div>
+    </div>
+    <footer>
+    <ul>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Privacy Policy</a>
+    </ul>
+    <p class="center"><i>Big Team 2023 &copy; <b>All Rights Reserved</b></i></p>
+</footer>
+</body>
+
+</html>

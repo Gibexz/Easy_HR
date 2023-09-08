@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyHR</title>
+    <link rel="icon" href="../images/icon.png" type="image/img">
+    <link rel="stylesheet" href="../styles/default.css">
+    <link rel="stylesheet" href="../styles/dashboard.css">
+</head>
+<body>
+    <header id="header">
+        <div class="image"><img src="../images/icon.png" alt="EasyHR"></div>
+       <div class="ul">
+        <ul>
+            <a href="#">Home</a>
+            <a href="../html/landing_page.html">Sign out</a>
+            <!-- <a href="#">Partnerships</a>
+            <a href="#">Contact</a> -->
+        </ul>
+    </div> 
+    </header>
+     <div id="container">
+        <div id="welcome">
+            <div id="logo">
+            </div>
+            <div class="welcome_body">
+                <h2>Welcome back {{ user }}</h2>
+                <h3>You have {{ emp_count }} employees</h3>
+            </div>
+        </div>
+            <div id="dashboard_items">
+                <div class="dashboard_btns">
+                    <button class="btn">
+                       <a href="../html/manage_employee.html">Manage Employee</a> 
+                    </button>
+                    <button class="btn">
+                        Manage Department
+                    </button>
+                    <button class="btn">
+                        Manage Branch
+                    </button>
+                    <button class="btn">
+                        Manage Payroll
+                    </button>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+    <ul>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Privacy Policy</a>
+    </ul>
+    <p class="center"><i>Big Team 2023 &copy; <b>All Rights Reserved</b></i></p>
+</footer>
+</html>

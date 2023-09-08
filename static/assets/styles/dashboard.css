@@ -1,0 +1,67 @@
+/* Default styles for your divs */
+#container {
+    background-color: #a59d9d;
+    padding: 10px;
+    margin: 10px 0;
+    display: flex; /* Use flexbox to arrange the elements */
+}
+
+#welcome {
+    flex: 1; /* Take up available space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 3px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+#welcome #logo {
+    background-image: url("../images/user.png");
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 150px;
+    background-position: center top;
+    text-align: center;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+
+.welcome_body {
+    margin-top: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+#dashboard_items {
+    flex: 1; /* Take up available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.dashboard_btns {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.btn {
+    height: 70px;
+    width: 100%;
+}
+/* Media query for responsiveness */
+@media (max-width: 700px) {
+    #container {
+        flex-direction: column;
+    }
+    #welcome, #dashboard_items {
+        width: auto;
+}
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+    <script src="https://apis.google.com/js/api:client.js"></script>    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyHR</title>
+    <link rel="icon" href="../images/icon.png" type="image/img">
+        <link rel="stylesheet" href="../styles/default.css">
+        <link rel="stylesheet" href="../styles/landing_page.css">
+
+</head>
+<body>
+    <header id="header">
+        <div class="image"><img src="../images/icon.png" alt="EasyHR"></div>
+       <div class="ul">
+        <ul>
+            <a href="#">Products</a>
+            <a href="#">Resources</a>
+            <a href="#">Partnerships</a>
+            <a href="#">Contact</a>
+        </ul>
+    </div> 
+    </header>
+     <div id="container">
+        <div id="login_container">
+            <div id="login">
+                <div>
+                    <p class="login_text">LOGIN</p>
+                    <p>Email</p>
+                    <input type="email" value="" placeholder="Johndoe@example.com">
+                    <p>Password</p>
+                    <input type="password" value="" placeholder="Password123++"><br>
+                    <button class="login_btn btn"><a href="../html/dashboard.html">Login</a></button>
+                    <div class="hr">
+                        <hr>
+                        <h4>OR</h4>
+                        <hr>
+                    </div>
+                    <!-- custom google button api -->
+                    <div id="gSignInWrapper">
+                        <div class="label">Sign in with:</div>
+                        <div id="customBtn" class="customGPlusSignIn">
+                            <div id="center">
+                                <span class="icon"></span>
+                                <span class="buttonText">Google</span>
+                            </div>
+                    </div>
+                      </div>
+                    <!-- ends here.  -->
+                    <div id="forgot_passw"><a href="#">Forgot Password?</a></div>
+                </div>
+                <div id="register_btn">
+                    <p>Don't have an account yet?</p>
+                    <button class="register_btn btn" ><a href="../html/sign_up_page.html">Register</a></button>
+                </div>
+            </div>
+            <div id="welcome_img">
+                <img id="side_image" class="side1" src="../images/enjoy_ease.jpg" alt="">
+            </div>
+            <div id="welcome_img">
+                <img id="side_image" class="side2" src="../images/save_more_time.jpg" alt="">
+            </div>
+            <div id="welcome_img">
+                <img id="side_image" class="side3" src="../images/trademark.jpg" alt="">
+            </div>
+        </div>
+        <div id="welcome_content">
+            <div class="center_header"><h1 class="inline-block">Welcome to E<p class="green">as</p>yH<p class="green">R</p></h1></div>
+            <div class="content">
+                <div class="welcome_img">
+                    <img src="../images/partner_with_us.jpeg" alt="">
+                </div>
+                <h2 class="center"> Your Ultimate Employee Management Solution</h2>
+                <p class="center">In the fast-paced world of business, managing your workforce efficiently is not just a necessity; it's the key to success. That's where EasyHR steps in a cutting-edge web application meticulously crafted to elevate your employee management to unparalleled heights.</p>
+
+                <h2 class="center"><b>Why Choose E<p class="green">as</p>yH<p class="green">R</p></b></h2>
+                <ul class="why_choose_us center">
+                    <li><b>Unbeatable Pricing:</b>We understand that managing a workforce shouldn't break the bank. EasyHR offers competitive pricing plans tailored to your company's size and needs, ensuring you get the most value without compromise.</li><br>
+                    <li><b>Fortified Data Security:</b>Your employee data is your company's lifeblood, and safeguarding it is our top priority. With advanced encryption and stringent security measures, EasyHR guarantees that your data remains confidential and protected from any breaches.</li><br>
+                    <li><b>Cloud-Powered Excellence:</b>Embrace the future with EasyHR's cloud-hosted infrastructure. Say goodbye to downtime and hello to uninterrupted access, thanks to our seamless cloud leverage. Your data is accessible anytime, anywhere, empowering you to manage your workforce on your terms.</li><br>
+                    <li><b>Effortless Navigation:</b>We know that simplicity is key. Navigating through EasyHR is a breeze, even for those not tech-savvy. Our intuitive user interface ensures that you and your team can jump in without any steep learning curve.</li><br>
+                    <li><b>24/7 Stellar Support:</b>Need assistance at any hour? Our dedicated support team is at your service 24/7, ensuring that your experience with EasyHR is nothing short of exceptional. From troubleshooting to guidance, we've got your back.</li><br>
+                    <li><b>All-in-One Solution:</b>EasyHR isn't just a tool – it's a comprehensive solution. Create and manage employee records, track leaves effortlessly, streamline payrolls, and securely store vital employee information all within a single, cohesive platform.</li><br>
+                </ul>
+
+                <h2 class="center">Join the E<p class="green">as</p>yH<p class="green">R</p> Revolution Today!</h2>
+                <p class="italics">Unlock Efficiency &nbsp;&nabla;&nbsp; Empower Your Workforce. &nbsp;&nabla;&nbsp;<b>Choose EasyHR.</b></p>
+        </div>
+        </div>
+    </div>
+<footer>
+    <ul>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Privacy Policy</a>
+    </ul>
+    <p class="center"><i>Big Team 2023 &copy; <b>All Rights Reserved</b></i></p>
+</footer>
+<script src="../scripts/sign_in_with_google.js"></script>
+<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+</body>
+</html>

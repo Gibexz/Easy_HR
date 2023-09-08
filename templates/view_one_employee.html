@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyHR</title>
+    <link rel="icon" href="../static/assets/images/icon.png" type="image/img">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/css/intlTelInput.css">
+    <link rel="stylesheet" href="../static/assets/styles/default.css">
+    <link rel="stylesheet" href="../static/assets/styles/manage_employee.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/js/intlTelInput.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="../static/assets/scripts/view_search_btn.js"></script>
+    <script src="../static/assets/scripts/manage_employee.js"></script>
+</head>
+<body>
+    <header id="header">
+        <div class="image"><img src="../static/assets/images/icon.png" alt="EasyHR"></div>
+       <div class="ul">
+        <ul>
+            <a href="#" onclick="window.close();">Close</a>
+            <a href="{{ url_for('auth.logout') }}">Sign out</a>
+            <!-- <a href="#">Partnerships</a>
+            <a href="#">Contact</a> -->
+        </ul>
+    </div> 
+    </header>
+     
+
+        <div id="manage_employee_view_v2">
+                        <div class="form_guide">
+                            <div>Do you want to view  employee by name or id?</div>
+                            <form id="employeeSearchForm" action="/view_employee"><div class="viewById">
+                                <b>Enter ID or Name: </b><input id="search_id" type="text" placeholder="Enter ID or Name">
+                                <button class="btn" type="submit">Search</button></div>
+                            </form>
+                        </div>
+                        <div id="select_view" class="below">
+                                <p>Enter the Employee information you wish to view above.</p>
+                                <p style="color: red;"><b> {{ write_up }}</b></p>
+                                <div id="view_employees">
+                                    {% if not view_employees %}
+                                        <h2>No Data Found</h2>
+                                    {% else %}
+                                            {% for item in view_employees %}
+                                            <div id="title" class="tr">
+                                                <h4><b>Name</b>: {{ item.firstName }} {{ item.middleName }} {{ item.lastName }}  - <b>ID:</b> {{ item.employeeId }}</h4>
+                                                    </div>
+                                                    <form action="/view_employees" id="employee_data">
+                                                    <div class="tr">
+                                                        <span class="td"><b>Date Employed</b>: {{ item.DateOfEmployment }}</span>
+                                                        <span class="td"><b>Department</b>: {{ item.department }}</span>
+                                                        <span class="td"><b>Email</b>: {{ item.email }}</span>
+                                                        <span class="td"><b>Level</b>: {{ item.level }}</span>
+                                                </div> 
+                                                <div class="tr">  <span class="td"><b>Salary</b>: {{ item.salary }}</span>
+                                                        <span class="td"><b>Phone</b>: {{ item.phoneNumber }}</span>
+                                                        <span class="td"><b>Address</b>: {{ item.address }}</span>
+                                                        <span class="td"><b>Nationality</b>: {{ item.nationality }}     </span>
+                                                    </div>
+                                                    <div class="tr"><span class="td"><b>State Of Origin</b>: {{ item.stateOfOrigin }}</span>
+                                                        <span class="td"><b>Branch</b>: {{ item.branch }}</span>
+                                                        <span class="td"><b>Date Of Birth</b>: {{ item.dateOfBirth }}</span>
+                                                        <span class="td"><b>Gender: </b>{{ item.gender }}</span>
+                                                    </div>
+                                                </tr>
+                                            </form>
+                                            {% endfor %}
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="right">
+                                <input type="reset" class="btn" id="cancel_btn"    value="Reset">
+                                <a href="{{url_for('main.view_employees')}}"><input type="submit" class="btn" id="update_btn" value="View All"></a>
+                            </div>
+                                        
+                            </form>
+        </div> 
+        <div id="manage_employee_archive">
+            <h2>No Archived Data Yet</h2>
+        </div>
+    </div>
+</body>
+<footer>
+    <ul>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Privacy Policy</a>
+    </ul>
+    <p class="center"><i>Big Team 2023 &copy; <b>All Rights Reserved</b></i></p>
+</footer>
+</html>
