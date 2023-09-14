@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EasyHR</title>
+    <title>Manage Employee - EasyHR</title>
     <link rel="icon" href="../static/assets/images/icon.png" type="image/img">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/css/intlTelInput.css">
     <link rel="stylesheet" href="../static/assets/styles/default.css">
@@ -24,7 +24,10 @@
             <!-- <a href="#">Partnerships</a>
             <a href="#">Contact</a> -->
         </ul>
-    </div> 
+    </div>
+    <div class="placeholder">
+            
+    </div>
     </header>
      <div id="container">
         <div id="welcome">
@@ -62,16 +65,16 @@
             {% endwith %}
         </div> -->
         <div id="manage_employee_add" class="manage_add">
-                <div id="register">
-                    <div class="flash_messages">
-                        {% with messages = get_flashed_messages() %}
-                        {% if messages %}
-                            <div class="red_background">
-                                {{ messages[0] }}
-                            </div>
-                        {% endif %}
-                        {% endwith %}
+            <div>
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <div class="flash_messages red_background">
+                        {{ messages[0] }}
                     </div>
+                {% endif %}
+                {% endwith %}
+            </div>
+                <div id="register">
                     <div class="flex_row">
                         <form id="form_table" action="/add_employee" method="post" enctype="multipart/form-data">
                         <div>
@@ -364,8 +367,15 @@
                 </div>
         </div>
         <div id="manage_employee_update">
-
-                    <div id="register">
+            <div>
+                {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <div class="flash_messages red_background">
+                        {{ messages[0] }}
+                    </div>
+                {% endif %}
+                {% endwith %}
+            </div>                    <div id="register">
                         <form id="form_table" class="retrieve_update_data" action="/update_employee" method="POST" enctype="multipart/form-data">
                             <div class="row">
                             <label for="firstName">First Name:</label>
@@ -613,7 +623,7 @@
     
                         <div class="row">
                             <label for="salary">Salary:</label>
-                            <input type="number" min="0" max="9000000000" id="salary" name="salary">
+                            <input type="number" min="0" max="900000000" id="salary" name="salary">
                             <label for="branch">Branch:</label>
                             <select type="text" id="branch" name="branch">
                                 <option value="">-- select one --</option>
@@ -630,7 +640,7 @@
                                 <option value="Finance">Finance</option>
                             </select>
                             <label for="dateEmp">Date of Employement:</label>
-                            <input type="date" class="date" id="dateEmp" name="DateOfEmployment" value = "">
+                            <input type="date" class="date" id="dateEmp" name="DateOfEmployment">
                         </div>
     
                         <div class="row">
@@ -670,7 +680,7 @@
             </div>
             <div class="right">
                 <input type="reset" class="btn" id="cancel_btn"    value="Archived">
-                <a href="{{url_for('main.view_employees')}}"><input type="submit" class="btn" id="update_btn" value="View All"></a>
+                <a href="{{url_for('main.view_employees')}}" style="text-decoration: none;"><input type="submit" class="btn" id="update_btn" value="View All"></a>
             </div>
         </div> 
         <div id="manage_employee_archive">
@@ -681,10 +691,10 @@
 </body>
 <footer>
     <ul>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Privacy Policy</a>
+        <a href="{{ url_for('main.about') }}">About</a>
+        <a href="{{ url_for('main.contact') }}">Contact</a>
+        <a href="{{ url_for('main.terms') }}">Terms of Service</a>
+        <a href="{{ url_for('main.privacy') }}">Privacy Policy</a>
     </ul>
     <p class="center"><i>Big Team 2023 &copy; <b>All Rights Reserved</b></i></p>
 </footer>

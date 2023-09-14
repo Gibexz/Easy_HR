@@ -1,0 +1,35 @@
+body {
+    margin: 0px;
+    width: 100%;
+    min-width: 800px;
+    background-image: linear-gradient(to right, rgb(230, 238, 230), rgb(168, 168, 172));
+
+}
+
+#terms {
+    height: fit-content;
+    margin: 20px;
+}
+
+h2 {
+    font-size: 30px;
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-image: linear-gradient(to right, rgb(2, 2, 2), rgb(151, 182, 122));
+}
+header{
+    display: none !important;
+}
+h4 {
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+.terms_text, .terms_list {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: black;
+    line-height: 1.5;
+    margin-top: 20px;
+}

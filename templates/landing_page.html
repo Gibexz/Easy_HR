@@ -4,7 +4,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
     <!-- <script src="https://apis.google.com/js/api:client.js"></script>    <meta charset="UTF-8"> -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EasyHR</title>
+    <title>Landing Page - EasyHR</title>
     <link rel="icon" href="../static/assets/images/icon.png" type="image/img">
         <link rel="stylesheet" href="../static/assets/styles/default.css">
         <link rel="stylesheet" href="../static/assets/styles/landing_page.css">
@@ -16,12 +16,15 @@
         <div class="image"><img src="../static/assets/images/icon.png" alt="EasyHR"></div>
        <div class="ul">
         <ul>
-            <a href="#">Products</a>
-            <a href="#">Resources</a>
-            <a href="#">Partnerships</a>
-            <a href="#">Contact</a>
+            <a href="{{ url_for('main.about') }}">About Us</a>
+            <a href="{{ url_for('main.privacy') }}">Partnership</a>
+            <a href="{{ url_for('main.contact') }}">Contact Us</a>
+            <a href="{{ url_for('main.terms') }}">Resources</a>
         </ul>
     </div> 
+    <div class="placeholder">
+            
+    </div>
     </header>
      <div id="container">
         <div id="login_container">
@@ -36,6 +39,7 @@
                     {% endwith %}
                     <form action="/login" method="POST">
                         <p class="login_text">LOGIN</p>
+                        {{ next }}
                         <p>Email</p>
                         <input type="email" value="" placeholder="Johndoe@example.com" name="official_email">
                         <p>Password</p>
@@ -107,10 +111,10 @@
     </div>
 <footer>
     <ul>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Privacy Policy</a>
+        <a href="{{ url_for('main.about') }}">About</a>
+        <a href="{{ url_for('main.contact') }}">Contact</a>
+        <a href="{{ url_for('main.terms') }}">Terms of Service</a>
+        <a href="{{ url_for('main.privacy') }}">Privacy Policy</a>
     </ul>
     <p class="center"><i>Big Team 2023 &copy; <b>All Rights Reserved</b></i></p>
 </footer>

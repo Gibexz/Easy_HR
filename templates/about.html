@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About EasyHR</title>
+    <link rel="icon" href="../static/assets/images/icon.png" type="image/img">
+    <link rel="stylesheet" href="../static/assets/styles/default.css">
+    <link rel="stylesheet" href="../static/assets/styles/about.css">
+    <script src="../static/assets/scripts/default.js"></script>
+</head>
+<body>
+    <header id="header">
+        <div class="image"><img src="../static/assets/images/icon.png" alt="EasyHR"></div>
+        <div class="ul">
+            <ul>
+                <a href="{{ url_for('main.landing_page') }}">Back</a>
+                <!-- <a href="#">Partnerships</a>
+                <a href="#">Contact</a> -->
+            </ul>
+        </div> 
+        <div class="placeholder">
+            
+        </div>
+    </header>
+    <div id="parent">
+        <div id="mission">
+            <h2 class="h2_heading">Our Mission</h2>
+            <p class="write_up">
+                    At EasyHR, our mission is to empower organizations
+                with intuitive HR solutions that simplify complexities,
+                foster talent development, and promote diversity and
+                inclusion.
+
+            </p>
+            <p class="write_up">
+                    We are committed to driving positive change in workplaces
+                worldwide by providing cutting-edge technology, exceptional
+                service, and a steadfast dedication to our clients' success
+            </p>
+        </div>
+        <div id="vision">
+            <h2 class="h2_heading">Our Vision</h2>
+            <p class="write_up">
+                To be the foremost catalyst of transformative workplace experiences,
+                where innovation, collaboration, and inclusivity flourish, creating
+                a future where every individual's potential is realized
+            </p>
+        </div>
+        <div id="goals">
+            <h2 class="h2_heading">Our Goals</h2>
+            <p class="write_up">
+                <ul class="about">
+                    <li>Excellence</li>
+                    <li>Adaptability</li>
+                    <li>Results-Oriented</li>
+                </ul>
+            </p>
+        </div>
+    </div>
+
+<footer>
+    <ul>
+        <a href="#">About</a>
+        <a href="{{ url_for('main.contact') }}">Contact</a>
+        <a href="{{ url_for('main.terms') }}">Terms of Service</a>
+        <a href="{{ url_for('main.privacy') }}">Privacy Policy</a>
+    </ul>
+    <p class="center"><i>Big Team 2023 &copy; <b>All Rights Reserved</b></i></p>
+</footer>
+</body>
+</html>

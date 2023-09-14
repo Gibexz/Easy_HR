@@ -22,7 +22,7 @@ body {
 /* Default setting for header */
 #header {
     height: 70px;
-    /* border-radius: 5px; */
+    display: flex;
     width: auto;
     text-align: center;
     background-color: #35424a;
@@ -30,6 +30,7 @@ body {
     font-family: 'Times New Roman', Times, serif;
 }
 #header img{
+    flex: 1;
     text-align: left;
     margin-left: 0;
     height: 66px;
@@ -41,20 +42,27 @@ body {
     text-align: left;
 }
  .ul {
+    flex: 1;
     display: inline-block;
-    transform: translate(0, -100%);
+    transform: translate(0, 15%);
     text-align: center;
 }
 #header a {
     text-decoration: none;
     color: white;
-    padding-right: 50px;
+    padding: 5px 20px;
     font-size: 16px;
 
 }
 header a:hover{
-    color: rgb(224, 216, 216);
+    color:black !important;
+    background-color: rgb(197, 195, 190);
+    transition: opacity 0.3s ease-in-out, background-color 0.2s ease-in-out;
     font-weight: bold;
+    border-radius: 5px;
+}
+.placeholder {
+    flex: 1;
 }
 @media (max-width: 700px) {
     #header, #footer {
@@ -165,10 +173,12 @@ footer ul {
 footer ul a{
     display: inline-block;
     text-decoration: none;
-    padding-right: 30px;
+    padding: 0px 15px;
     color: white;
 }
-
+footer a:hover{
+    color: greenyellow;
+}
 .flash_messages {
     opacity: 1;
     transition: opacity 1s ease-in-out, background-color 1s ease-in-out;
@@ -177,7 +187,9 @@ footer ul a{
     border-radius: 5px;
     padding: 10px;
     margin: 5px;
+    z-index: 9999;
 }
+
 .flash_messages a {
     color: white;
 }

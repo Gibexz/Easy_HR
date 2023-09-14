@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work in progress</title>
+    <link rel="icon" href="../static/assets/images/icon.png" type="image/img">
+    <link rel="stylesheet" href="../static/assets/styles/default.css">
+    <link rel="stylesheet" href="../static/assets/styles/work_in_progress.css">
+</head>
+<body>
+    <header id="header">
+    <div class="image"><img src="../static/assets/images/wip.webp" alt="EasyHR"></div>
+        <div class="ul">
+            <ul>
+                <a href="{{ url_for('main.dashboard' )}}">Home</a>
+                <a href="{{ url_for('auth.login')}}">Sign out</a>
+                <!-- <a href="#">Partnerships</a>
+                <a href="#">Contact</a> -->
+            </ul>
+        </div>
+        <div class="placeholder">
+            
+        </div>
+    </header>
+
+    <div class="p_container">
+        <div id="work_in_progress"></div>
+    </div>
+    
+</body>
+<footer>
+    <ul>
+        <a href="{{ url_for('main.about') }}">About</a>
+        <a href="{{ url_for('main.contact') }}">Contact</a>
+        <a href="{{ url_for('main.terms') }}">Terms of Service</a>
+        <a href="{{ url_for('main.privacy') }}">Privacy Policy</a>
+    </ul>
+    <p class="center"><i>Big Team 2023 &copy; <b>All Rights Reserved</b></i></p>
+</footer>
+</html>

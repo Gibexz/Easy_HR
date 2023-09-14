@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EasyHR</title>
+    <title>View Employee - EasyHR</title>
     <link rel="icon" href="../static/assets/images/icon.png" type="image/img">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.12/css/intlTelInput.css">
     <link rel="stylesheet" href="../static/assets/styles/default.css">
@@ -23,7 +23,10 @@
             <!-- <a href="#">Partnerships</a>
             <a href="#">Contact</a> -->
         </ul>
-    </div> 
+    </div>
+    <div class="placeholder">
+            
+    </div>
     </header>
      
 
@@ -83,10 +86,10 @@
 </body>
 <footer>
     <ul>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-        <a href="#">Terms of Service</a>
-        <a href="#">Privacy Policy</a>
+        <a href="{{ url_for('main.about') }}">About</a>
+        <a href="{{ url_for('main.contact') }}">Contact</a>
+        <a href="{{ url_for('main.terms') }}">Terms of Service</a>
+        <a href="{{ url_for('main.privacy') }}">Privacy Policy</a>
     </ul>
     <p class="center"><i>Big Team 2023 &copy; <b>All Rights Reserved</b></i></p>
 </footer>

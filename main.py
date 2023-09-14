@@ -11,6 +11,22 @@ main = Blueprint('main', __name__)
 def landing_page():
     return render_template('landing_page.html')
 
+@main.route('/about')
+def about():
+    return render_template('about.html')
+
+@main.route('/privacy')
+def privacy():
+    return render_template('privacy.html')
+
+@main.route('/terms')
+def terms():
+    return render_template('terms_of_use.html')
+
+@main.route('/contact')
+def contact():
+    return render_template('contact.html')
+
 @main.route('/dashboard')
 @login_required
 def dashboard():

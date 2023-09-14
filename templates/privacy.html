@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy - EasyHR</title>
+    <link rel="icon" href="../static/assets/images/icon.png" type="image/img">
+    <link rel="stylesheet" href="../static/assets/styles/default.css">
+    <link rel="stylesheet" href="../static/assets/styles/privacy.css">
+</head>
+<body>
+    <header id="header">
+        <div class="image"><img src="../static/assets/images/icon.png" alt="EasyHR"></div>
+        <div class="ul">
+            <ul>
+                <a href="{{ url_for('main.landing_page') }}">Back Home</a>
+                <!-- <a href="#">Partnerships</a>
+                <a href="#">Contact</a> -->
+            </ul>
+        </div> 
+        <div class="placeholder">
+            
+        </div>
+    </header>
+    <div id="privacy">
+        <h2>Introduction</h2>
+        <p class="private_text">
+            Welcome to EasyHR. We respect your privacy and are committed to protecting your personal information. 
+            This Privacy Policy will help you understand how we collect, use, disclose, and safeguard your personal 
+            data when you use our website EasyHR.com.
+        </p>
+        <h2>Information We Collect</h2>
+        <ul class="private">
+            <li>
+                <h4>Personal Information:</h4>
+                We may collect personally identifiable information, such as your name, email address, phone number,
+                or other identifiers, when you voluntarily submit it through forms on our Website.
+            </li>
+            <li>
+                <h4>Usage Data:</h4>
+                We may collect non-personal information about how you interact with our Website, such as your IP address,
+                browser type, pages viewed, and other analytical data.
+            </li>
+            <li>
+                <h4>Cookies:</h4>
+                We may use cookies and similar tracking technologies to enhance your experience
+                on our Website and collect data about your usage patterns. You can manage your cookie preferences 
+                through your browser settings.
+            </li>
+        </ul>
+        <h2>How We Use Your Information</h2>
+        <p class="private_text">We may use the information we collect for various purposes, including:</p>
+        <ul class="private">
+            <li>Providing and maintaining our Website.</li>
+            <li>Sending you newsletters or promotional materials</li>
+            <li>Responding to your requests or inquiries.</li>
+            <!-- <li>Analyzing and improving our services.</li> -->
+        </ul>
+    </div>
+
+    
+    
+</body>
+<footer>
+    <ul>
+        <a href="{{ url_for('main.about') }}">About</a>
+        <a href="{{ url_for('main.contact') }}">Contact</a>
+        <a href="{{ url_for('main.terms') }}">Terms of Service</a>
+        <a href="#">Privacy Policy</a>
+    </ul>
+    <p class="center"><i>Big Team 2023 &copy; <b>All Rights Reserved</b></i></p>
+</footer>
+</html>

@@ -1,0 +1,22 @@
+body {
+    margin: 0px;
+    width: 100%;
+    min-width: 700px;
+}
+
+
+.p_container {
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#work_in_progress {
+    height: 500px;
+    width: 80%;
+    background-image: url("../images/wip.webp");
+    background-repeat: no-repeat;
+    background-size: 80% 100%;
+    background-position: center;
+}
